@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_all"
+        android:text="@string/all"
+        app:layout_constraintTop_toTopOf="@id/checked"
+        app:layout_constraintBottom_toBottomOf="@id/checked"
+        app:layout_constraintRight_toLeftOf="@id/checked"
+        android:layout_marginEnd="@dimen/_8sdp"
+        style="@style/TextMedium"/>
+
+    <Switch
+        android:id="@+id/checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:thumb="@drawable/switch_ios_thumb"
+        android:track="@drawable/switch_ios_track"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_75sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:paddingBottom="@dimen/_105sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checked" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,541 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Mardex" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/main_color</item>
+        <item name="colorPrimaryVariant">@color/secondary_color</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/main_color</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/light_white</item>
+        <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
+
+    </style>
+
+
+    <style name="ImageViewDefStyle">
+        <item name="android:padding">@dimen/_4sdp</item>
+        <item name="android:layout_width">@dimen/_42sdp</item>
+        <item name="android:layout_height">@dimen/_42sdp</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+
+    <style name="TextMedium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:layout_marginTop">@dimen/_8sdp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_marginBottom">@dimen/_8sdp</item>
+    </style>
+
+    <style name="TextLarge" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_18ssp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextSmall" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_medium_500</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/hintColor</item>
+    </style>
+
+    <style name="RoundCardViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardCornerRadius">@dimen/_36sdp</item>
+        <item name="cardPreventCornerOverlap">true</item>
+        <item name="cardElevation">@dimen/_2sdp</item>
+    </style>
+
+    <style name="RectangleCardViewWithCorner" parent="RoundCardViewStyle">
+        <item name="cardCornerRadius">@dimen/_12sdp</item>
+        <item name="cardElevation">8dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <style name="TopRoundedCornerShape" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/_36sdp</item>
+        <item name="cornerSizeTopRight">@dimen/_36sdp</item>
+    </style>
+
+    <style name="RoundedCornerShape" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyBottomLeft">rounded</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/_28sdp</item>
+        <item name="cornerSizeTopRight">@dimen/_28sdp</item>
+        <item name="cornerSizeBottomLeft">@dimen/_28sdp</item>
+        <item name="cornerSizeBottomRight">@dimen/_28sdp</item>
+    </style>
+
+    <style name="BottomMenuShape" parent="RoundedCornerShape">
+        <item name="cornerSizeTopLeft">@dimen/_16sdp</item>
+        <item name="cornerSizeTopRight">@dimen/_16sdp</item>
+        <item name="cornerSizeBottomLeft">@dimen/_16sdp</item>
+        <item name="cornerSizeBottomRight">@dimen/_16sdp</item>
+    </style>
+
+    <style name="MainButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/_12sdp</item>
+        <item name="android:drawableEnd">@drawable/ic_right</item>
+        <item name="android:textAppearance">@style/TextMedium</item>
+        <item name="cornerRadius">@dimen/_16sdp</item>
+        <item name="android:paddingTop">@dimen/_12sdp</item>
+        <item name="android:paddingBottom">@dimen/_12sdp</item>
+        <item name="android:textSize">@dimen/_17ssp</item>
+    </style>
+
+    <style name="ButtonCall">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawableLeft">@drawable/ic_call</item>
+        <item name="android:textAppearance">@style/TextMedium</item>
+        <item name="cornerRadius">@dimen/_20sdp</item>
+        <item name="android:paddingTop">@dimen/_8sdp</item>
+        <item name="android:paddingBottom">@dimen/_8sdp</item>
+
+    </style>
+
+    <style name="ButtonMap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/_12sdp</item>
+        <item name="android:textAppearance">@style/TextMedium</item>
+        <item name="cornerRadius">@dimen/_20sdp</item>
+        <item name="android:paddingTop">@dimen/_12sdp</item>
+        <item name="android:paddingBottom">@dimen/_12sdp</item>
+
+    </style>
+
+
+    <style name="BackButtonDarkGrey">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/_12sdp</item>
+        <item name="android:textAppearance">@style/TextSmall</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="cornerRadius">@dimen/_10sdp</item>
+        <item name="android:paddingTop">@dimen/_19sdp</item>
+        <item name="android:paddingBottom">@dimen/_19sdp</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+
+    <style name="TabLayoutStyle" parent="Widget.Design.TabLayout">
+        <item name="tabBackground">@drawable/tab_selector</item>
+        <item name="tabTextAppearance">@style/TextMedium</item>
+        <item name="tabSelectedTextColor">@color/main_color</item>
+    </style>
+
+    <style name="RatingBarStyle">
+        <item name="srb_clearRatingEnabled">false</item>
+        <item name="srb_clickable">false</item>
+        <item name="srb_drawableEmpty">@drawable/star_empty</item>
+        <item name="srb_drawableFilled">@drawable/star_filled</item>
+        <item name="srb_isIndicator">false</item>
+        <item name="srb_minimumStars">0</item>
+        <item name="srb_numStars">5</item>
+        <item name="srb_scrollable">true</item>
+        <item name="srb_starHeight">@dimen/_14sdp</item>
+        <item name="srb_starPadding">@dimen/_3sdp</item>
+        <item name="srb_starWidth">@dimen/_14sdp</item>
+        <item name="srb_stepSize">0.5</item>
+    </style>
+
+    <style name="ButtonChange">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/_5sdp</item>
+        <item name="android:textAppearance">@style/TextSmall</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="cornerRadius">@dimen/_15sdp</item>
+        <item name="android:paddingTop">@dimen/_16sdp</item>
+        <item name="android:paddingBottom">@dimen/_16sdp</item>
+        <item name="android:drawableRight">@drawable/ic_right</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="drawableTint">@color/black</item>
+        <item name="android:layout_marginRight">@dimen/_10sdp</item>
+        <item name="backgroundTint">@color/jobs_item_color</item>
+
+    </style>
+
+    <style name="SearchLayoutStyle">
+        <item name="boxCornerRadiusBottomEnd">@dimen/_10sdp</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/_10sdp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/_10sdp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/_10sdp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="endIconDrawable">@drawable/ic_clear</item>
+        <item name="endIconMode">clear_text</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
+    <style name="SearchTextViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:drawableEnd">@drawable/ic_search_icon</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:inputType">textFilter</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:paddingStart">@dimen/_15sdp</item>
+        <item name="android:paddingEnd">@dimen/_5sdp</item>
+        <item name="android:textColor">@color/bottom_icon_color</item>
+        <item name="android:textColorHint">@color/bottom_icon_color</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+    </style>
+
+    <style name="CircleButtonImageStyle" parent="ImageViewDefStyle">
+        <item name="android:layout_width">@dimen/_24sdp</item>
+        <item name="android:layout_height">@dimen/_24sdp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">@dimen/_2sdp</item>
+        <item name="android:contentDescription">@string/app_name</item>
+    </style>
+
+    <style name="CircleButtonStyle" parent="RoundCardViewStyle">
+        <item name="android:layout_width">@dimen/_44sdp</item>
+        <item name="android:layout_height">@dimen/_44sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_8sdp</item>
+        <item name="cardCornerRadius">@dimen/_22sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_20sdp</item>
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+
+    <style name="SheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <!--<item name="android:windowCloseOnTouchOutside">false</item>-->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+
+    <style name="ImageSplashStyle">
+        <item name="android:layout_width">@dimen/_100sdp</item>
+        <item name="android:layout_height">@dimen/_110sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_20sdp</item>
+    </style>
+
+    <style name="AppVersionTextStyle" parent="TextMedium">
+        <item name="android:textColor">@color/AppVersionTextColor</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:layout_marginTop">@dimen/_50sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_20sdp</item>
+    </style>
+
+
+    <style name="ButtonNextStyle" parent="TextMedium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/_18ssp</item>
+        <item name="android:padding">@dimen/_15sdp</item>
+        <item name="cornerRadius">@dimen/_20sdp</item>
+        <item name="android:layout_marginTop">@dimen/_50sdp</item>
+        <item name="android:layout_marginStart">@dimen/_10sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <style name="ButtonEnterStyle" parent="TextMedium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/_18ssp</item>
+        <item name="android:padding">@dimen/_22sdp</item>
+        <item name="cornerRadius">@dimen/_20sdp</item>
+        <item name="android:layout_marginTop">@dimen/_30sdp</item>
+        <item name="android:layout_marginStart">@dimen/_20sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_20sdp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="PopToBackImageViewStyle" parent="ImageViewDefStyle">
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="android:layout_width">@dimen/_40sdp</item>
+        <item name="android:layout_height">@dimen/_40sdp</item>
+        <item name="android:layout_marginStart">@dimen/_15sdp</item>
+        <item name="android:layout_marginTop">@dimen/_12sdp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:src">@drawable/ic_back</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="LogoMardexImageStyle" parent="ImageViewDefStyle">
+        <item name="android:layout_width">@dimen/_80sdp</item>
+        <item name="android:layout_height">@dimen/_80sdp</item>
+        <item name="android:contentDescription">@string/app_name</item>
+        <item name="android:src">@drawable/ic_logo</item>
+        <item name="android:layout_marginTop">@dimen/_40sdp</item>
+    </style>
+
+    <style name="TextTitleSignUpStyle" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_22ssp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginTop">@dimen/_20sdp</item>
+    </style>
+
+
+    <style name="TextMiddleTitlePhoneSignUpStyle" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:layout_marginStart">@dimen/_10sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/sign_title_txt_color</item>
+        <item name="android:layout_marginTop">@dimen/_15sdp</item>
+    </style>
+
+
+    <style name="InputEditTextCardViewStyle" parent="CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/_10sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_10sdp</item>
+        <item name="android:layout_marginTop">@dimen/_7sdp</item>
+        <item name="cardCornerRadius">@dimen/_20sdp</item>
+        <item name="backgroundTint">@color/jobs_item_color</item>
+        <item name="cardElevation">@dimen/_5sdp</item>
+    </style>
+
+
+    <style name="InputEditTextLayoutStyle">
+        <item name="backgroundTint">@color/new_green</item>
+        <item name="android:padding">@dimen/_10sdp</item>
+        <item name="hintTextAppearance">@style/TextSmall</item>
+        <item name="hintTextColor">@color/eye_grey</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="startIconTint">@color/hint_text_color</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="android:textColorHint">@color/hint_text_color</item>
+    </style>
+
+
+    <style name="InputEditTextMStyle">
+        <item name="android:fontFamily">@font/gilroy_medium_500</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:drawablePadding">@dimen/_5sdp</item>
+        <item name="android:textColorHint">@color/hint_text_color</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+    </style>
+
+    <style name="InputMaskedEditTextPhoneStyle" parent="InputEditTextMStyle">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:inputType">numberPassword|phone</item>
+        <item name="mask">+998(##)###-##-##</item>
+        <item name="singleLine">true</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:fontFamily">@font/gilroy_medium_500</item>
+        <item name="allowed_chars">1234567890</item>
+        <item name="keep_hint">false</item>
+        <item name="boxStrokeColor">@color/white</item>
+    </style>
+
+    <style name="InputMaskedEditTextFullNameStyle" parent="InputEditTextMStyle">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:inputType">text</item>
+        <item name="singleLine">true</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:textCursorDrawable">@drawable/color_cursor</item>
+    </style>
+
+    <style name="LinearLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+
+    <style name="ForgotYouPassword" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <style name="ResetPassword" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:textColor">@color/main_color</item>
+    </style>
+
+    <style name="IfYourAccountAvailableSignUpStyle" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginTop">@dimen/_25sdp</item>
+    </style>
+
+
+    <style name="GoSignInTextStyle" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:textColor">@color/new_green</item>
+        <item name="drawableTint">@color/new_green</item>
+        <item name="android:drawablePadding">@dimen/_5sdp</item>
+        <item name="android:layout_marginTop">@dimen/_7sdp</item>
+    </style>
+
+    <style name="TextMiddleTitlesSignUpStyle" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:layout_marginStart">@dimen/_20sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_20sdp</item>
+        <item name="android:textColor">@color/sign_title_txt_color</item>
+        <item name="android:layout_marginTop">@dimen/_25sdp</item>
+    </style>
+
+
+    <style name="ClickableImageViewStyle" parent="ImageViewDefStyle">
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="PinViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_28ssp</item>
+        <item name="android:inputType">number</item>
+        <item name="android:itemBackground">@color/jobs_item_color</item>
+        <item name="OtpItemCount">6</item>
+        <item name="OtpViewType">line</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="OtpLineColor">@color/black</item>
+        <item name="android:longClickable">false</item>
+        <item name="android:textIsSelectable">false</item>
+        <item name="android:cursorVisible">false</item>
+    </style>
+
+
+    <style name="ProgressBarStyle">
+        <item name="android:layout_width">@dimen/_120sdp</item>
+        <item name="android:layout_height">@dimen/_120sdp</item>
+        <item name="elevation">@dimen/_40sdp</item>
+        <item name="android:padding">@dimen/_20sdp</item>
+    </style>
+
+    <style name="ClickableLayoutStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">?android:selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+
+    <style name="AppVersionTextStyleIntro" parent="AppVersionTextStyle">
+        <item name="android:layout_marginTop">@dimen/_15sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_15sdp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="TextTitleListOfImagesStyle" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_25ssp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginRight">@dimen/_30sdp</item>
+        <item name="android:layout_marginLeft">@dimen/_30sdp</item>
+        <item name="android:layout_marginTop">@dimen/_20sdp</item>
+    </style>
+
+
+    <style name="TextTitleEditFragmentStyle" parent="TextMedium">
+        <item name="android:textSize">@dimen/_25ssp</item>
+        <item name="android:layout_width">@dimen/_200sdp</item>
+        <item name="android:textColor">@color/color_T</item>
+        <item name="android:layout_marginTop">@dimen/_12sdp</item>
+    </style>
+
+    <style name="TextDescEditFragmentStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:textColor">@color/sign_title_txt_color</item>
+        <item name="android:layout_marginTop">@dimen/_15sdp</item>
+    </style>
+
+    <style name="CardVETEditFragmentStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/_7sdp</item>
+        <item name="android:layout_marginStart">@dimen/_15sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_15sdp</item>
+        <item name="cardCornerRadius">@dimen/_20sdp</item>
+        <item name="cardElevation">@dimen/_10sdp</item>
+    </style>
+
+    <style name="EditTextEditFragmentStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/_20sdp</item>
+        <item name="android:textColor">@color/color_T</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:background">@color/jobs_item_color</item>
+    </style>
+
+    <style name="ButtonSaveStyle" parent="TextMedium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/_18ssp</item>
+        <item name="android:padding">@dimen/_16sdp</item>
+        <item name="cornerRadius">@dimen/_20sdp</item>
+        <item name="android:backgroundTint">@color/new_green</item>
+        <item name="android:layout_marginTop">@dimen/_30sdp</item>
+        <item name="android:layout_marginStart">@dimen/_15sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_15sdp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <color name="search_text_color">#2D2D2D</color>
+</resources>

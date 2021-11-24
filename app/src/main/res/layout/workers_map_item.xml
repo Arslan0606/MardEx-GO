@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.yandex.mapkit.mapview.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@drawable/transparent_back"
+        android:elevation="@dimen/_2sdp"
+        android:layout_height="@dimen/_40sdp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:elevation="@dimen/_3sdp"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/layout_zoom_in"
+            style="@style/CircleButtonStyle"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:cardBackgroundColor="@color/light_white">
+
+            <ImageView
+                android:id="@+id/button_zoom_in"
+                style="@style/CircleButtonImageStyle"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_zoom_in" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/layout_zoom_out"
+            style="@style/CircleButtonStyle"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:cardBackgroundColor="@color/light_white">
+
+            <ImageView
+                android:id="@+id/button_zoom_out"
+                style="@style/CircleButtonImageStyle"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_zoom_out" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/layout_day_night"
+                style="@style/CircleButtonStyle"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/light_white">
+
+                <ImageView
+                    android:id="@+id/button_day_night"
+                    android:clickable="false"
+                    style="@style/CircleButtonImageStyle"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_day_night" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/layout_navigate"
+                style="@style/CircleButtonStyle"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/light_white">
+
+                <ImageView
+                    android:id="@+id/button_navigate"
+                    style="@style/CircleButtonImageStyle"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_navigate" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/workerList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_100sdp"
+            android:orientation="horizontal"
+            app:layoutManager=".utils.custom.HorizontalLayoutManager"
+            tools:listitem="@layout/worker_item_selectable" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@drawable/transparent_back_rotated"
+        android:layout_gravity="bottom"
+        android:elevation="@dimen/_2sdp"
+        android:layout_height="@dimen/_150sdp"/>
+
+</FrameLayout>

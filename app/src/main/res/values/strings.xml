@@ -1,0 +1,248 @@
+<resources>
+    <string name="app_name" translatable="false">MardEx GO</string>
+    <string name="failure">Profilingiz bilan bo`gliq muammo. Iltimos, tizimga qayta kiring.</string>
+    <string name="turn_on_internet">Internetni yoqing!</string>
+    <string name="internet_slow">Internet tezligi past. Qayta urinib ko’ring</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_mardex">MardEx GO ga\nxush kelibsiz!</string>
+    <string name="name_placeholder">Farhod Tohirov</string>
+    <string name="fast_search">Tezkor buyurtma</string>
+    <string name="description_text_1">Bir zumda onlayn ishchilarni\ntaklif qiling</string>
+    <string name="find_master">Ishchi yollash</string>
+    <string name="post_work_text">Buyurtma e’lon qilish</string>
+    <string name="description_text_2">Buyurtma eʻlon qilib, taklif oling va ishchilarni tanlang</string>
+    <string name="post_work">Buyurtmani e’lon qilish</string>
+    <string name="home">Bosh sahifa</string>
+    <string name="category">Kategoriyalar</string>
+    <string name="search">Qidirish</string>
+    <string name="choose_category">Kategoriyani tanlang</string>
+    <string name="default_notification_channel_id" translatable="false">NOTIFICATION CHANNEL FOR NOTIFICATION</string>
+
+    <string name="category_text">Kategoriya mutaxassisligi %1$s</string>
+    <string name="all_count">Hammasi: %1$d</string>
+    <string name="add_vacancy">Buyurtma qoʻshish</string>
+    <string name="about_job">Buyurtma nomi (Nom berish majburiy)</string>
+    <string name="hint">Xonadon taʻmirlash…</string>
+    <string name="cost">Narx</string>
+    <string name="cost_hint">100,000</string>
+    <string name="description">Buyurtmani tasvirlang</string>
+    <string name="worker_count">Ishchilar soni</string>
+    <string name="_1">1</string>
+    <string name="your_address">Sizning manzilingiz</string>
+    <string name="detect_by_gps">Sizning manzilingiz GPS orqali oʻrnatiladi</string>
+    <string name="by_map">Xaritada koʻrsatish</string>
+    <string name="make_vacancy">Buyurtma yaratish</string>
+    <string name="category_jobs">Ishchilar kategoriyasi</string>
+    <string name="about_worker">Ishchi haqida</string>
+    <string name="rate_placeholder">4,5</string>
+    <string name="description_placeholder">Soʻrov faqat onlayn ishchilarga yuboriladi</string>
+    <string name="image">Foto</string>
+    <string name="review">Sharhlar</string>
+    <string name="mark">Baholar</string>
+    <string name="t1_1">Ishlashi</string>
+    <string name="t1_2">Javobgarlik</string>
+    <string name="send_invitation">Soʻrov yuborish</string>
+    <string name="name_place_holder_2">Abduraimov Ismoil Rozmetovich</string>
+    <string name="review_placeholder_2">Soʻrov faqat onlayn ishchilarga yuboriladi</string>
+    <string name="alert">Diqqat!</string>
+    <string name="gps_is_not_enabled">GPS faollashtirilmagan. Sozlamalarga o\'tib, GPS ni faollashtirishni so\'raymiz!</string>
+    <string name="settings">Sozlamalar</string>
+    <string name="cancel">Bekor qilish</string>
+    <string name="map">Xarita</string>
+    <string name="list">Roʻyxat</string>
+    <string name="on_map">Xaritada</string>
+    <string name="change">O\'zgartirish</string>
+    <string name="personal_date">Shaxsiy ma\'lumotlar</string>
+    <string name="phone_number">Telefon raqami</string>
+    <string name="password">Parol</string>
+    <string name="your_tariff">Tarifingiz</string>
+    <string name="start">Start</string>
+    <string name="two_times_top">2 marta top</string>
+    <string name="three_time_calls">3 marta chaqiruv</string>
+    <string name="_summa">5.000 soʻm</string>
+    <string name="reason_cancellation">Bekor qilish sababi</string>
+    <string name="productivity">Ishlashi</string>
+    <string name="responsibility">Javobgarligi</string>
+    <string name="mastering">Mahorati</string>
+    <string name="give_feedback">Fikr qoldiring</string>
+    <string name="back">Orqaga</string>
+    <string name="cancel_call">Bekor qilish</string>
+    <string name="rate_us">Ishchini baholang</string>
+    <string name="finish">Tamomlash</string>
+    <string name="activate">Faollashtirish</string>
+    <string name="premium">P</string>
+    <string name="sum_15_000">15.000 soʻm</string>
+    <string name="times_top_9">9 marta top</string>
+    <string name="call_times_11">11 marta chaqiruv</string>
+    <string name="standard_rates"> Tariflar</string>
+    <string name="tariff">Tariflar</string>
+    <string name="active_order">Faol buyurtma</string>
+    <string name="price">Narx:</string>
+    <string name="price_sum">2.000.000 soʻm</string>
+    <string name="description_of_order">Buyurtma tavsifi</string>
+    <string name="active_order_example_text">korzinka.uz supermarket rasmiy saytiga xush kelibsiz! Bizning saytimizga tashrif buyuring va soʻnggi yangiliklar va aksiyalardan xabardor boʻling.</string>
+    <string name="text_order">Daraxtni, emanni koʻchirib, hovlini boʻyashingiz kerak.</string>
+    <string name="photo">Foto</string>
+    <string name="find_worker">Ijrochi</string>
+    <string name="show_on_map">Xaritada koʻrsatish</string>
+    <string name="accept">Tamomlash</string>
+    <string name="dark_mode">Tungi rejim</string>
+    <string name="exit">Chiqish</string>
+    <string name="mardex_v1_0">MardEx V1.0</string>
+    <string name="send_n_request">%1$d ishchiga soʻrov yuborish</string>
+    <string name="_4_5">4,5</string>
+    <string name="no_workers">Ishchi topilmadi</string>
+
+
+    <string name="all">Hammasi</string>
+    <string name="text_t_1">Tanlangan ustalarni tasdiqlash</string>
+    <string name="search_new"><b>Qidiruv:</b> Bogʻbon, usta…</string>
+    <string name="orders">Buyurtmalar</string>
+    <string name="profile">Profil</string>
+    <string name="connected">Bogʻlangan</string>
+    <string name="fast_orders">das</string>
+    <string name="photo_call">Buyurtmaning foto surati</string>
+    <string name="my_balance">Mening hisobim</string>
+    <string name="news">Yangiliklar</string>
+    <string name="how_to_use">Qanday ishlatilishi</string>
+    <string name="soft_lang">Dastur tili </string>
+    <string name="enter_next">Davom ettirish</string>
+    <string name="login">MardEx GO ga kirish</string>
+    <string name="enter_phone_number_">Telefon raqamingizni kiriting</string>
+    <string name="phone_number_">Telefon raqami</string>
+    <string name="enter_password_ba">Parolni kiriting</string>
+    <string name="password_">Parol</string>
+    <string name="forgot_password_">Parolni unutdingizmi?</string>
+    <string name="enter_">Kirish</string>
+    <string name="account_not_available">Siz roʻyxatdan oʻtmagansizmi?</string>
+    <string name="go_to_sign_up">Roʻyxatdan oʻtish</string>
+    <string name="please_enter_phone">Iltimos telefon raqamingizni kiriting!</string>
+    <string name="t1_3">Something</string>
+    <string name="info_text"> Bizda 300 dan ortiq kasblar bo’yicha mutaxassislar ishlaydi </string>
+    <string name="take_photo">Kamerada rasmga olish</string>
+    <string name="choose_from_gallery">Galereyadan rasm yuklash</string>
+    <string name="incorrent_passwort">Parolni xato kiritdingiz. </string>
+    <string name="sign_up">Roʻyhatdan oʻtish</string>
+    <string name="enter_name_surname"> Familiya, ism va sharifingizni kiriting</string>
+    <string name="f__i_sh">F.I.SH</string>
+    <string name="confirm_password_">Parolni takrorlang</string>
+    <string name="confirm_hint">Parolni takror kiriting</string>
+    <string name="do_you_have_an_account">Siz roʻyhatdan oʻtganmisiz?</string>
+    <string name="sign_in">Kirish</string>
+    <string name="password_not_same">Kiritgan parolingiz bir biriga mos emas</string>
+    <string name="telefon_raqamingizni_tasdiqlang">Telefon raqamingizni tasdiqlang</string>
+    <string name="telefon_raqamingiz_1_s_ga_sms_kod_yuborildi">Telefon raqamingiz %1$s ga sms kod yuborildi</string>
+    <string name="kodni_kiriting">Kodni kiriting</string>
+    <string name="kod_sizga_jo_natilgan">Kod sizga yuborildi</string>
+    <string name="qayta_jo_natish">Takror joʻnatish </string>
+    <string name="send_after">Takror yuborish </string>
+    <string name="resend_sms">Takror yuborish </string>
+    <string name="code_incorrect">Kiritilgan sms kodi xato</string>
+    <string name="sms_is_not_working">Serverda texnik ishlar olib borilmoqda</string>
+    <string name="try_after_a_while">Server bilan bogʻliq muammo</string>
+    <string name="status_request">Soʻrovlar holati</string>
+    <string name="send_to_n_workers">Sizning soʻrovingiz \n%1$d ishchiga joʻnatildi</string>
+    <string name="users_r">Ijrochilar:</string>
+    <string name="saw">Koʻrib chiqildi</string>
+    <string name="name_full">Familiya, ism va sharifingiz</string>
+    <string name="tel">+998998878895</string>
+    <string name="night_mode">Tungi rejim</string>
+    <string name="menu_logout">Chiqish</string>
+    <string name="restore_password_">Parolni tiklash</string>
+    <string name="login_">Kirish</string>
+    <string name="enter_password">Parolni kiriting</string>
+    <string name="next">Davom etish</string>
+    <string name="o_zbek">Oʻzbek tili</string>
+    <string name="rus">Русский язык</string>
+    <string name="krill">Ўзбек тили</string>
+    <string name="choose_lang">Tilni tanlang!</string>
+    <string name="add_jobs">Qoʻshish</string>
+    <string name="_10" translatable="false">10</string>
+    <string name="accepted_n_workers">Sizning soʻrovingizni %1$d nafar ishchi qabul qildi</string>
+    <string name="see_on_map">Xaritada koʻrsatish</string>
+    <string name="find_again">Koʻproq ijrochilarni yollash</string>
+    <string name="you_can_find_tttt">Buyurtma boʻlimida mavjud buyurtmaning holatini koʻrishingiz mumkin</string>
+    <string name="call">Qoʻng\iroq qilish</string>
+
+
+    <string name="personal_data">Shaxsiy maʻlumotlar</string>
+    <string name="fish_desc">Sizning ism, Familiya va sharifingiz</string>
+    <string name="fio">F.I.SH</string>
+    <string name="info_user">Siz haqingizda maʻlumot</string>
+    <string name="user_info_example">Misol uchun, men 5 yil qurilishda ishlaganman. Parket uslubini qanday qilishni bilaman…</string>
+    <string name="save">Saqlash</string>
+    <string name="edit_password">Parolni oʻzgartirish</string>
+    <string name="old_password">Oldingi parol</string>
+    <string name="new_password">Yangi parol</string>
+    <string name="enter_new_password_again">Yangi parolni takrorlang</string>
+    <string name="no_jobs">Hech narsa topilmadi!</string>
+    <string name="show_all">Hammasini ko\'rsatish</string>
+    <string name="choose_jobs_temp">"Kategoriyadagi mutaxassislik"</string>
+    <string name="results">Qidiruv natijalari:</string>
+    <string name="choose_jobs">“%1$s” kategoriyasida ixtisoslashuv</string>
+    <string name="address_example">Toshkent,Chilonzor</string>
+    <string name="example_subtitle">Qozirobod koʻcha</string>
+    <string name="result_test">result_test</string>
+    <string name="bottom_title_example">Default Address</string>
+    <string name="bottom_sub_title_example">My address sub</string>
+    <string name="mening_manzilim_deb_belgilash">Mening manzilim deb belgilash</string>
+    <string name="show_in_map">Xaritada koʻrsatish</string>
+    <string name="please_reset_password">Siz oldin roʻyhatdan oʻtgansiz. Iltimos, parolingizni tiklang!</string>
+    <string name="restore_password">Parolni tiklash</string>
+    <string name="desc_send_sms_code">Sizning raqamingizga sms orqali kod yuboriladi</string>
+    <string name="yes">Ha</string>
+    <string name="no">Yoʻq</string>
+    <string name="password_lenth_no">Parol uzunligi kamida 4 ta belgi boʻlishi kerak!</string>
+    <string name="cancel_worker_text">Haqiqatdan ham ishni bekor qilmoqchimisiz?</string>
+    <string name="notification_news">Xabar</string>
+    <string name="news_notification">Xabarlar</string>
+    <string name="notification_time">15.02.2021 15:35</string>
+    <string name="image_notification">Image_notification</string>
+    <string name="close_text">Barchasini yopish</string>
+    <string name="now_working_on_it">Hozirda ushbu imkoniyatni yaratish ustida ish olib borilmoqda. Yaqin kunlarda mazkur imkoniyatni siz azizlarga taqdim etamiz</string>
+    <string name="currently_no_news">Hozirda yangiliklar mavjud emas</string>
+    <string name="promocode_">Promokodni kiriting (mavjud bo’lsa)</string>
+    <string name="_500_000" translatable="false">500 000</string>
+    <string name="worker_on_request">Quyidagi ishchi sizning so`rovingizni ko`rmoqda</string>
+
+
+    <string-array name="currency_type">
+        <item>Soʻm</item>
+        <item>Dollar</item>
+        <item>Rubl</item>
+    </string-array>
+
+    <string name="check_policy">Davom etish uchun Ommaviy ofertaga rozi bo`ling!</string>
+    <string name="agree_policy">Ommaviy ofertaga roziman</string>
+    <string name="share">Dasturni ulashish</string>
+    <string name="change_language">Tilni o\'zgartirish</string>
+
+    <string name="t_site">Bizning sayt</string>
+
+    <string name="_998_93_000_88_55_call" translatable="false">+998930008855</string>
+    <string name="_998_93_000_88_55" translatable="false">+998 93 000 88 55</string>
+    <string name="t_call" translatable="false">Call-center</string>
+    <string name="mardex_uz" translatable="false">mardex.uz</string>
+    <string name="empty">Hurmatli foydalanuvchi, ayni vaqtda xabarlar mavjud emas</string>
+    <string name="orders_title">Buyurtmalar</string>
+    <string name="privacy_policy">Ommaviy oferta</string>
+
+
+    <string name="choose_region">Viloyatni tanlang:</string>
+    <string name="choose_region_">Viloyatni tanlang</string>
+    <string name="select_an_option">Tanlanmadi</string>
+    <string name="choose_city">Tumanni tanlang:</string>
+    <string name="choose_city_">Tumanni tanlang</string>
+    <string name="man">Erkak</string>
+    <string name="woman">Ayol</string>
+    <string name="gender">Jinsingiz:</string>
+    <string name="promocode_text">Promokodni kiriting</string>
+    <string name="enter_promocode_and_get_price">Promokodni kiriting va bonuslarga ega bo\'ling.</string>
+    <string name="xxx_xxx" translatable="false">XXX XXX</string>
+    <string name="error_promocode">Promokod xato</string>
+    <string name="success_promo">Promokod tasdiqlandi.</string>
+    <string name="promocode_used">Promokod sizda faollashtirilgan.</string>
+    <string name="_00000" translatable="false">00000</string>
+
+</resources>

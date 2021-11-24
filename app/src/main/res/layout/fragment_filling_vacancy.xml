@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<uz.star.mardex.utils.custom.ScrollViewWithMap xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/back_white_and_black"
+    android:paddingStart="@dimen/_12sdp"
+    android:paddingEnd="@dimen/_12sdp"
+    android:scrollbarThumbVertical="@null">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/back"
+            style="@style/ImageViewDefStyle"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back"
+            app:tint="@color/black" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextLarge"
+            android:text="@string/add_vacancy"
+            android:textSize="@dimen/_19ssp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextSmall"
+            android:text="@string/category"
+            android:textColor="@color/black" />
+
+        <include
+            android:id="@+id/job"
+            layout="@layout/jobs_item_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_2sdp" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextSmall"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="@string/about_job"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_2sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_2sdp"
+            app:cardPreventCornerOverlap="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/jobs_item_color"
+                android:hint="@string/hint"
+                android:inputType="text"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingTop="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_20sdp"
+                android:textColor="@color/black"
+                android:textColorHint="#A3A3A3" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextSmall"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="@string/cost"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_2sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_2sdp"
+            app:cardPreventCornerOverlap="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!--<com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="@color/jobs_item_color"
+                    android:hint="@string/cost_hint"
+                    android:inputType="number"
+                    android:paddingStart="@dimen/_20sdp"
+                    android:paddingTop="@dimen/_20sdp"
+                    android:paddingEnd="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_20sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_color_text" />-->
+
+                <uz.star.mardex.utils.custom.MoneyEditText
+                    android:id="@+id/price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="@color/jobs_item_color"
+                    android:hint="@string/cost_hint"
+                    android:inputType="number"
+                    android:paddingStart="@dimen/_20sdp"
+                    android:paddingTop="@dimen/_20sdp"
+                    android:paddingEnd="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_20sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_color_text" />
+
+                <Spinner
+                    android:id="@+id/spn_currency"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:popupBackground="@color/jobs_item_color" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextSmall"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="@string/description"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_2sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_2sdp"
+            app:cardPreventCornerOverlap="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/descriptionFull"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/jobs_item_color"
+                android:gravity="top"
+                android:hint="@string/hint"
+                android:maxLength="150"
+                android:maxLines="3"
+                android:minHeight="@dimen/_100sdp"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_color_text" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextSmall"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="@string/worker_count"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:animateLayoutChanges="true"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/minusWorkerCount"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_8sdp"
+                app:cardBackgroundColor="@color/jobs_item_color"
+                app:cardCornerRadius="@dimen/_8sdp"
+                app:cardElevation="@dimen/_2sdp"
+                app:cardPreventCornerOverlap="true">
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_minus" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:layout_weight="1"
+                android:animateLayoutChanges="true"
+                android:padding="@dimen/_8sdp"
+                app:cardBackgroundColor="@color/jobs_item_color"
+                app:cardCornerRadius="@dimen/_8sdp"
+                app:cardElevation="@dimen/_2sdp"
+                app:cardPreventCornerOverlap="true">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/workerCount"
+                    style="@style/TextLarge"
+                    android:layout_gravity="center"
+                    android:text="@string/_1"
+                    android:textSize="@dimen/_24ssp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/plusWorkerCount"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_8sdp"
+                app:cardBackgroundColor="@color/jobs_item_color"
+                app:cardCornerRadius="@dimen/_8sdp"
+                app:cardElevation="@dimen/_2sdp"
+                app:cardPreventCornerOverlap="true">
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_plus" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            app:cardElevation="@dimen/_2sdp"
+            app:cardPreventCornerOverlap="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/jobs_item_color"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_8sdp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextMedium"
+                        android:text="@string/your_address" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextSmall"
+                        android:layout_marginTop="0dp"
+                        android:text="@string/detect_by_gps" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_open_map"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/by_map"
+                        android:textAllCaps="false"
+                        android:textColor="@color/secondary_color"
+                        android:textSize="@dimen/_13ssp"
+                        app:backgroundTint="@color/button_map_tint" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <com.yandex.mapkit.mapview.MapView
+                        android:id="@+id/map"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:nestedScrollingEnabled="false" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextSmall"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="@string/photo_call"
+            android:textColor="@color/black" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_photos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:spanCount="3"
+            tools:itemCount="1"
+            tools:listitem="@layout/photos_item_recycler" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sendRequest"
+            style="@style/MainButtonStyle"
+            android:text="@string/make_vacancy"
+            app:backgroundTint="@color/new_green" />
+
+    </LinearLayout>
+
+</uz.star.mardex.utils.custom.ScrollViewWithMap>

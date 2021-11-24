@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/main_color">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <ImageView
+            android:id="@+id/back"
+            style="@style/ImageViewDefStyle"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextLarge"
+            android:text="@string/status_request"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/back" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/panel"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:animateLayoutChanges="true"
+            android:elevation="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/back">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:elevation="@dimen/_8sdp"
+                app:cardBackgroundColor="@color/color_white_light"
+                app:shapeAppearance="@style/RoundedCornerShape">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_8sdp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/workerCountText"
+                        style="@style/TextLarge"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:gravity="center"
+                        android:text="@string/accepted_n_workers"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextLarge"
+                        android:layout_width="match_parent"
+                        android:text="@string/users_r"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="2"
+                        tools:listitem="@layout/worker_call_item" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextMedium"
+                        android:gravity="center"
+                        android:text="@string/you_can_find_tttt"
+                        android:textColor="@color/color_T"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/seeOnMapButton"
+                        style="@style/MainButtonStyle"
+                        android:layout_margin="@dimen/_4sdp"
+                        android:drawableEnd="@null"
+                        android:text="@string/see_on_map" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/call_another_workers"
+                        style="@style/MainButtonStyle"
+                        android:layout_margin="0dp"
+                        android:layout_marginLeft="@dimen/_4sdp"
+                        android:layout_marginRight="@dimen/_4sdp"
+                        android:backgroundTint="@color/color_grey"
+                        android:drawableEnd="@null"
+                        android:text="@string/find_again"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_100sdp"
+            android:background="@color/color_white_light" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/workerInfo"
+        layout="@layout/fragment_about_connected_worker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

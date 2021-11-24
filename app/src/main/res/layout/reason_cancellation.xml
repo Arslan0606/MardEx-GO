@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingBottom="@dimen/_8sdp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_tab_bg">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/rate_textView"
+        style="@style/TextLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="@string/reason_cancellation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:src="@drawable/ic_exit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black" />
+
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/reason_checkbox1"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/check_box_background"
+        android:button="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rate_textView" />
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/TextSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="@string/productivity"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@id/reason_checkbox1"
+        app:layout_constraintStart_toEndOf="@id/reason_checkbox1"
+        app:layout_constraintTop_toTopOf="@id/reason_checkbox1" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/reason_checkbox2"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/check_box_background"
+        android:button="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reason_checkbox1"
+
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/TextSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/responsibility"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@id/reason_checkbox2"
+        app:layout_constraintStart_toEndOf="@id/reason_checkbox1"
+        app:layout_constraintTop_toTopOf="@id/reason_checkbox2" />
+
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/reason_checkbox3"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/check_box_background"
+        android:button="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reason_checkbox2"
+
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/TextSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/mastering"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@id/reason_checkbox3"
+        app:layout_constraintStart_toEndOf="@id/reason_checkbox1"
+        app:layout_constraintTop_toTopOf="@id/reason_checkbox3" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_110sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/background_dark_grey_border"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/give_feedback"
+        android:inputType="textMultiLine"
+        android:padding="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reason_checkbox3" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextMultiLine">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:id="@+id/buttonCancel"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_weight="10"
+            android:backgroundTint="#D8DCE8"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/back"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_15sdp"
+            app:cornerRadius="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonSave"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextTextMultiLine" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSave"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:backgroundTint="#FF6969"
+            android:drawableEnd="@drawable/ic_exit_white"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:text="@string/cancel_call"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_15sdp"
+            app:cornerRadius="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextTextMultiLine"
+            tools:ignore="RtlSymmetry" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

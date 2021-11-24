@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="uz.star.mardex.ui.screen.working.home_fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_jobChooserFragment"
+            app:destination="@id/jobChooserFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/jobChooserFragment"
+        android:name="uz.star.mardex.ui.screen.working.home_fragment.job_chooser.JobChooserFragment"
+        android:label="fragment_job_chooser"
+        tools:layout="@layout/fragment_job_chooser">
+        <action
+            android:id="@+id/action_jobChooserFragment_to_fillingVacancyFragment"
+            app:destination="@id/fillingVacancyFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/fillingVacancyFragment"
+        android:name="uz.star.mardex.ui.screen.working.home_fragment.filling_vacancy.FillingVacancyFragment"
+        android:label="fragment_filling_vacancy"
+        tools:layout="@layout/fragment_filling_vacancy">
+        <argument
+            android:name="job"
+            app:argType="uz.star.mardex.model.response.server.jobs.Job" />
+        <action
+            android:id="@+id/action_fillingVacancyFragment_to_workersFragment"
+            app:destination="@id/workersFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_fillingVacancyFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/workersFragment"
+        android:name="uz.star.mardex.ui.screen.working.home_fragment.workers_fragment.WorkersFragment"
+        android:label="fragment_workers"
+        tools:layout="@layout/fragment_workers">
+        <argument
+            android:name="job"
+            app:argType="uz.star.mardex.model.response.server.jobs.Job" />
+        <action
+            android:id="@+id/action_workersFragment_to_selectedWorkersFragment"
+            app:destination="@id/selectedWorkersFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <argument
+            android:name="vacanyData"
+            app:argType="uz.star.mardex.model.data_exchange.SocketRequestModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectedWorkersFragment"
+        android:name="uz.star.mardex.ui.screen.working.home_fragment.selected_workers.SelectedWorkersFragment"
+        android:label="fragment_selected_workers"
+        tools:layout="@layout/fragment_selected_workers">
+        <argument
+            android:name="workers"
+            app:argType="uz.star.mardex.model.data_exchange.WorkersList" />
+        <action
+            android:id="@+id/action_selectedWorkersFragment_to_sendWorkersRequestFragment"
+            app:destination="@id/sendWorkersRequestFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <argument
+            android:name="vacanyData"
+            app:argType="uz.star.mardex.model.data_exchange.SocketRequestModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="uz.star.mardex.ui.screen.working.orders.OrdersFragment"
+        android:label="fragment_orders"
+        tools:layout="@layout/fragment_orders" />
+    <fragment
+        android:id="@+id/connectedWorkersFragment"
+        android:name="uz.star.mardex.ui.screen.working.connected_workers.ConnectedWorkersListFragment"
+        android:label="fragment_connected_workers"
+        tools:layout="@layout/fragment_connected_workers" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="uz.star.mardex.ui.screen.working.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_editPersonalDataFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/editPersonalDataFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_profileFragment_to_editPasswordFragment"
+            app:destination="@id/editPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sendWorkersRequestFragment"
+        android:name="uz.star.mardex.ui.screen.working.home_fragment.send_request_workers.SendWorkersRequestFragment"
+        android:label="fragment_send_workers_request"
+        tools:layout="@layout/fragment_send_workers_request">
+        <argument
+            android:name="workers"
+            app:argType="uz.star.mardex.model.data_exchange.WorkersList" />
+        <argument
+            android:name="vacanyData"
+            app:argType="uz.star.mardex.model.data_exchange.SocketRequestModel" />
+        <action
+            android:id="@+id/action_sendWorkersRequestFragment_to_respondedWorkersFragment"
+            app:destination="@id/respondedWorkersFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/jobChooserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/respondedWorkersFragment"
+        android:name="uz.star.mardex.ui.screen.working.home_fragment.responded_workers.RespondedWorkersFragment"
+        android:label="fragment_responded_workers"
+        tools:layout="@layout/fragment_responded_workers">
+        <argument
+            android:name="workers"
+            app:argType="uz.star.mardex.model.data_exchange.WorkersList" />
+    </fragment>
+    <fragment
+        android:id="@+id/editPersonalDataFragment"
+        android:name="uz.star.mardex.ui.screen.working.profile.editpersonaldata_fragment.EditPersonalDataFragment"
+        android:label="fragment_edit_personal_data"
+        tools:layout="@layout/fragment_edit_personal_data" />
+    <fragment
+        android:id="@+id/editPasswordFragment"
+        android:name="uz.star.mardex.ui.screen.working.profile.editpassword_fragment.EditPasswordFragment"
+        android:label="fragment_edit_password"
+        tools:layout="@layout/fragment_edit_password" />
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="uz.star.mardex.ui.screen.working.home_fragment.filling_vacancy.map_fragment.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" />
+    <fragment
+        android:id="@+id/languageFragment2"
+        android:name="uz.star.mardex.ui.screen.entry.language_fragment.LanguageFragment"
+        android:label="LanguageFragment" />
+    <fragment
+        android:id="@+id/changeLanguageFragment"
+        android:name="uz.star.mardex.ui.screen.entry.change_language.ChangeLanguageFragment"
+        android:label="ChangeLanguageFragment" />
+    <fragment
+        android:id="@+id/promocodeFragment"
+        android:name="uz.star.mardex.ui.screen.working.home_fragment.promocode.PromocodeFragment"
+        android:label="PromocodeFragment" />
+</navigation>

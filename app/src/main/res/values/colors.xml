@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF8D06</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="main_color">#21A366</color>
+    <color name="secondary_color">#FF8D06</color>
+    <color name="new_green">#02C65C</color>
+    <color name="light_white">#F7F9FB</color>
+
+    <color name="hintColor">#5C6E86</color>
+    <color name="hint_color_text">#A3A3A3</color>
+    <color name="button_map_tint">#F4F2ED</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="color_grey">#D8DCE8</color>
+
+    <color name="start_back_color">#02C45C</color>
+    <color name="end_back_color">#029746</color>
+
+    <color name="AppVersionTextColor">#AEB8C5</color>
+    <color name="sign_title_txt_color">#505E70</color>
+    <color name="hint_text_color">#B3BECC</color>
+
+    <color name="progress_color">#E84835</color>
+    <color name="red">#E84835</color>
+    <color name="color_T">#1B1B1B</color>
+    <color name="nav_phone">#1e1e1e</color>
+    <color name="navigation_button_color">#F7F9FB</color>
+    <color name="eye_grey">#93A0B0</color>
+
+    <color name="shadow_start_color">#403434</color>
+    <color name="shadow_center_color">#A19A9A</color>
+    <color name="color_white_light">#F7F9FB</color>
+    <color name="back_white_90">#F7F9FB</color>
+    <color name="menu_text_def_color">#1D2428</color>
+
+    <color name="colorShade">#6D553634</color>
+    <color name="colorBackSearchET">#CC9D9DA8</color>
+
+    <color name="colorBackMap">#EFE6E6</color>
+    <color name="colorLineRvItem">#EEEEEF</color>
+
+    <color name="bottom_icon_color">#242B38</color>
+    <color name="jobs_item_color">#FFFFFF</color>
+
+    <color name="text_user_color">#727F93</color>
+    <color name="text_user_number_color">#02C65C</color>
+    <color name="text_number_color">#000000</color>
+
+    <color name="back_white_and_black">#FFFFFF</color>
+    <color name="dot_color">#4D4D4D</color>
+    <color name="dot_background_color">#7A8DA6</color>
+    <color name="color_bottom_sheet">#000</color>
+
+    <color name="language_selected">#DBFFEB</color>
+    <color name="grey_text">#89939F</color>
+    <color name="list_of_images_desc_txt_color">#505E70</color>
+
+
+</resources>

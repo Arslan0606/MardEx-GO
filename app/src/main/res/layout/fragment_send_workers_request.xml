@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/main_color">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <ImageView
+            android:id="@+id/back"
+            style="@style/ImageViewDefStyle"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextLarge"
+            android:text="@string/status_request"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/back" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/panel"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:animateLayoutChanges="true"
+            android:elevation="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/back">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:elevation="@dimen/_8sdp"
+                app:cardBackgroundColor="@color/color_white_light"
+                app:shapeAppearance="@style/RoundedCornerShape">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_8sdp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/workerCountText"
+                        style="@style/TextLarge"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:gravity="center"
+                        android:text="@string/send_to_n_workers"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="@dimen/_120sdp"
+                            android:background="@drawable/cl_progress_elevation_back"
+                            app:layout_constraintBottom_toBottomOf="@+id/cl_progress"
+                            app:layout_constraintEnd_toEndOf="@+id/cl_progress"
+                            app:layout_constraintStart_toStartOf="@+id/cl_progress"
+                            app:layout_constraintTop_toTopOf="@+id/cl_progress" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_progress"
+                            android:layout_width="@dimen/_95sdp"
+                            android:layout_height="@dimen/_95sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:background="@drawable/cl_progress_back"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/workerCount"
+                                style="@style/TextMedium"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginBottom="0dp"
+                                android:text="@string/_10"
+                                android:textSize="@dimen/_24ssp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:text="12/15" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/sek"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/saw"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_9ssp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/workerCount" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <hiennguyen.me.circleseekbar.CircleSeekBar
+                            android:id="@+id/progress_bar"
+                            style="@style/ProgressBarStyle"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:longClickable="false"
+                            android:nestedScrollingEnabled="false"
+                            app:csb_arcColor="@color/new_green"
+                            app:csb_arcWidth="@dimen/_4sdp"
+                            app:csb_isShowText="false"
+                            app:csb_max="100"
+                            app:csb_progress="10"
+                            app:csb_progressColor="@color/red"
+                            app:csb_progressWidth="@dimen/_6sdp"
+                            app:csb_textColor="@color/transparent"
+                            app:csb_textSize="@dimen/_30sdp"
+                            app:csb_thumbDrawable="@drawable/circle_pp"
+                            app:csb_thumbSize="@dimen/_10sdp"
+                            app:layout_constraintBottom_toBottomOf="@+id/cl_progress"
+                            app:layout_constraintEnd_toEndOf="@+id/cl_progress"
+                            app:layout_constraintStart_toStartOf="@+id/cl_progress"
+                            app:layout_constraintTop_toTopOf="@+id/cl_progress" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            app:layout_constraintBottom_toBottomOf="@id/progress_bar"
+                            app:layout_constraintLeft_toLeftOf="@id/progress_bar"
+                            app:layout_constraintRight_toRightOf="@id/progress_bar"
+                            app:layout_constraintTop_toTopOf="@id/progress_bar" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextLarge"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:layout_marginBottom="0dp"
+                        android:text="@string/worker_on_request"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <include
+                        android:id="@+id/workerOnRequest"
+                        layout="@layout/worker_item_show_only" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextLarge"
+                        android:layout_width="match_parent"
+                        android:text="@string/users_r"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="2"
+                        tools:listitem="@layout/worker_item_selectable" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/call_another_workers"
+                        style="@style/MainButtonStyle"
+                        android:backgroundTint="@color/red"
+                        android:drawableEnd="@null"
+                        android:text="@string/cancel" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_100sdp"
+            android:background="@color/color_white_light" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

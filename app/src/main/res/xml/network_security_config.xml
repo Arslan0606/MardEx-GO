@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+            <domain includeSubdomains="true">83.69.136.140</domain>
+        </trust-anchors>
+    </base-config>
+
+</network-security-config>

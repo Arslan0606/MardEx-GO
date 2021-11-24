@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_15sdp">
+
+    <ImageView
+        android:id="@+id/back_button"
+        style="@style/ClickableImageViewStyle"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black" />
+
+
+    <ImageView
+        android:id="@+id/logoImage"
+        style="@style/LogoMardexImageStyle"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/verificationScreenTitle"
+        style="@style/TextTitleSignUpStyle"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:text="@string/telefon_raqamingizni_tasdiqlang"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoImage" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/verificationScreenSubtitle"
+        style="@style/TextSmall"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:maxLines="2"
+        android:text="@string/telefon_raqamingiz_1_s_ga_sms_kod_yuborildi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/verificationScreenTitle" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/verifyCodeTitle"
+        style="@style/TextSmall"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="@string/kodni_kiriting"
+        app:layout_constraintStart_toStartOf="@+id/pin_view"
+        app:layout_constraintTop_toBottomOf="@+id/verificationScreenSubtitle" />
+
+
+    <FrameLayout
+        android:id="@+id/pin_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/verifyCodeTitle">
+
+        <com.mukesh.OtpView
+            android:id="@+id/code"
+            style="@style/PinViewStyle"
+            android:layout_gravity="center" />
+
+        <View
+            android:id="@+id/aboveCode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_code_desc"
+        style="@style/TextSmall"
+        android:fontFamily="@font/gilroy_bold_700"
+        android:text="@string/kod_sizga_jo_natilgan"
+        android:textColor="@color/text_user_number_color"
+        app:layout_constraintEnd_toEndOf="@+id/pin_view"
+        app:layout_constraintStart_toStartOf="@+id/pin_view"
+        app:layout_constraintTop_toBottomOf="@+id/pin_view" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_send_again"
+        style="@style/CircleButtonImageStyle"
+        android:layout_width="wrap_content"
+        android:elevation="@dimen/_10sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:backgroundTint="@color/jobs_item_color"
+        android:drawableEnd="@drawable/ic_refresh"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_15sdp"
+        android:text="@string/qayta_jo_natish"
+        android:textAllCaps="false"
+        android:textColor="@color/hintColor"
+        app:cornerRadius="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_code_desc"
+        app:layout_constraintWidth_percent="0.6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
